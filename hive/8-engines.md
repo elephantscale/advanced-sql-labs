@@ -3,7 +3,7 @@
 [Main Index](../../README.md)
 
 -----
-# Lab HIVE-9: Using Hive with Tez and Spark Engines
+# Lab  Using Hive with Tez and Spark Engines
 
 
 ### Overview

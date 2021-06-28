@@ -1,9 +1,9 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-[Main Index](../../README.md)
+[Main Index](../README.md)
 
 -----
-# Lab HIVE-2: Hive Customer Billing
+# Lab Hive Customer Billing
 
 **Note : Replace MY_NAME appropriately throughout the lab.**
 

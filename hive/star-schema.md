@@ -4,7 +4,7 @@
 
 -----
 
-# Lab: Up and Running With HIve
+# Lab: Star Schema
 
 **Note : Replace MY_NAME appropriately throughout the lab.**
 

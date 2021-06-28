@@ -1,14 +1,14 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-[Main Index](../../README.md)
+[Main Index](../README.md)
 
 -----
 
-# Lab  Modern Data Formats (Parquet / ORC)
+# Lab: Row Storage vs Columnar storage
 
 
 ### Overview
-Learn to use modern data formats - Parquet and ORC - with Hive
+Compare Row Storage Vs Columnar Sorage
 
 ### Builds on
 None

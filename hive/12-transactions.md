@@ -4,7 +4,7 @@
 
 -----
 
-# Lab HIVE-12: Transactional Tables
+# Lab  Transactional Tables
 
 **Note : Replace MY_NAME appropriately throughout the lab.**
 

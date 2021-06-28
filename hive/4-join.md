@@ -4,7 +4,7 @@
 
 -----
 
-# Lab HIVE-4 : Hive Joins
+# Lab  Hive Joins
 
 ## Step 1 : Launch Hive client
 

@@ -4,7 +4,7 @@
 
 ---
 
-# Lab  Hive Partitions
+# Buckets
 
 ## Step 1: Start Hive Shell
 ```bash

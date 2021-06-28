@@ -4,7 +4,7 @@
 
 -----
 
-# Lab HIVE-11 : Optimize Hive Queries
+# Lab  Optimize Hive Queries
 
 
 ### Overview

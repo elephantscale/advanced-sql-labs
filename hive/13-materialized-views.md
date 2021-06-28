@@ -3,7 +3,7 @@
 [Main Index](../../README.md)
 
 -----
-# Lab HIVE-132: Hive Materialized Views
+# Lab Hive Materialized Views
 
 **Note : Replace MY_NAME appropriately throughout the lab.**
 

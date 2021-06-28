@@ -4,7 +4,7 @@
 
 -----
 
-# Lab Hive-5: Hive Stats
+# Lab: Hive Stats
 
 ### Overview
 Basic statistics in hive.
