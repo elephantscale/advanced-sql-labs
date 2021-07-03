@@ -2,8 +2,14 @@
 
 # Advanced SQL Labs
 
+These are the labs for the classes
 
-## Modern Big Dat Engineering with SQL 101 Labs
+ * Modern Big Data Engineering with SQL 101 
+ * Modern Big Data ENgineering with SQL 201
+
+
+ 
+## Modern Big Data Engineering with SQL 101 Labs
 
  * [1. Hive Intro](hive/1-intro.md)
  * [2. Star Schema](hive/1-intro.md)
@@ -18,7 +24,7 @@
  * [11. Hive on Spark ](hive/hive-spark.md)
  * [12. Benchmarking Tez](hive/hive-tez.md)
 
-## Modern Big Dat Engineering with SQL 201 Labs
+## Modern Big Data Engineering with SQL 201 Labs
 
  * [1. Aggregate Query](hive/aggregate-query.md)
  * [2. Explain](hive/explain.md)
