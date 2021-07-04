@@ -12,7 +12,7 @@ These are the labs for the classes
 ## Modern Big Data Engineering with SQL 101 Labs
 
  * [1. Hive Intro](hive/1-intro.md)
- * [2. Star Schema](hive/1-intro.md)
+ * [2. Star Schema](hive/star-schema/README.md)
  * [3. Row vs Columnar](hive/row-columnar.md)
  * [4. Specify Shema](hive/specify-shema.md)
  * [5. Hive Billing](hive/2-billing.md)
@@ -20,8 +20,8 @@ These are the labs for the classes
  * [7. Hive Buckets](hive/buckets.md)
  * [8. Keywords](keywords.md)
  * [9. Materialized Views](13-materialized-views.md)
- * [10. Tez](hive/8-engines.md)
- * [11. Hive on Spark ](hive/hive-spark.md)
+ * [10. Tez](hive/tez/README.md)
+ * [11. Hive on Spark ](hive/hive-on-spark.md)
  * [12. Benchmarking Tez](hive/hive-tez.md)
 
 ## Modern Big Data Engineering with SQL 201 Labs
@@ -34,7 +34,7 @@ These are the labs for the classes
  * [7. Debug Mode](hive/debug-mode.md)
  * [8. Stack Trace](hive/stack-trace.md)
  * [9. CBO](hive/cbo.md)
- * [10. UDF](hive/udf.md)
+ * [10. UDF](hive/udf/README.md)
  * [11. Transactions](12-transactions.md)
 
 

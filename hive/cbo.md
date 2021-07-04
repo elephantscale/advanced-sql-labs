@@ -52,6 +52,11 @@ Here are some tips for you
 * Change the execution engine to Tez (See [Tez labs](../3.9-tez/README.md) for instructions)
 * Use 'map-join / memory-join' (see [join lab](../3.4-join/README.md) for instructions)
 * Convert the tables to Parquet or ORC formats (see [Data Formats lab](../3.10-data-formats/README.d))
+* Use CBO
+
+```console
+
+```
 
 You can use a combination of all these techniques!
 

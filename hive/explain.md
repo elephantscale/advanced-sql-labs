@@ -43,10 +43,11 @@ hive>
   set hive.cli.print.header=true;
   use MY_NAME_db;
 
-  select SUM(transactions.amount) as total,  vendors.category from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category order by total desc;
+  explain select SUM(transactions.amount) as total,  vendors.category from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category order by total desc;
 ```
 
-**=> Note the time taken**  
+**=> See what it says for the explain**
+
 
 ## Step 3 : Optimize!
 
