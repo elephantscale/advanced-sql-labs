@@ -1,7 +1,6 @@
 [<< back to main index](../README.md)
 
-Lab 3.4 Complex Schema
-=======================
+# Star Schema
 
 ### Overview
 
@@ -24,7 +23,7 @@ Nothing
 ERD for source data
 -----------------------
 
-<img src="../../img/clickstream_erd.png" style="border: 5px solid grey ; max-width:100%;" /> 
+<img src="../../assets/images/clickstream_erd.png" style="border: 5px solid grey ; max-width:100%;" /> 
 
 Note that we are not using all of the tables in the ERD.
 
