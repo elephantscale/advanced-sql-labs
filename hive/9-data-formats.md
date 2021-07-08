@@ -74,18 +74,18 @@ hive>
 Let's do an aggregate query on the tables and compare performance.
 
 ### Query 1 : Simple aggregate (MAX)
-Let's find MAX(amount) from all tables.  
+Let's find MAX(amount_customer) from all tables.  
 **=> Note the query time for all tables**
 
 ```sql  
     -- CSV table
-    SELECT MAX(amount) FROM transactions;
+    SELECT MAX(amount_customer) FROM transactions;
 
     -- parquet
-    SELECT MAX(amount) FROM transactions_parquet;
+    SELECT MAX(amount_customer) FROM transactions_parquet;
 
     -- ORC
-    SELECT MAX(amount) FROM transactions_orc;
+    SELECT MAX(amount_customer) FROM transactions_orc;
 ```
 
 ### Query 2 : Top-10 customers
@@ -94,15 +94,15 @@ Let's find MAX(amount) from all tables.
 
 ```sql
     /* csv */
-    SELECT account_id, SUM(amount) AS total FROM transactions
+    SELECT account_id, SUM(amount_customer) AS total FROM transactions
     GROUP BY account_id ORDER BY total DESC LIMIT 10;
 
     /* parquet */
-    SELECT account_id, SUM(amount) AS total FROM transactions_parquet
+    SELECT account_id, SUM(amount_customer) AS total FROM transactions_parquet
     GROUP BY account_id ORDER BY total DESC LIMIT 10;
 
     /* ORC */
-    SELECT account_id, SUM(amount) AS total FROM transactions_orc
+    SELECT account_id, SUM(amount_customer) AS total FROM transactions_orc
     GROUP BY account_id ORDER BY total DESC LIMIT 10;
 ```
 

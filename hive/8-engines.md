@@ -35,7 +35,7 @@ Spark works on pretty much all distributions.
 
             set hive.execution.engine=mr;  
 
-            select account_id, SUM(amount) as total from transactions group by account_id order by total desc limit 10;
+            select account_id, SUM(amount_customer) as total from transactions group by account_id order by total desc limit 10;
 ```
 
 Note the time taken by query
@@ -46,7 +46,7 @@ Note the time taken by query
     hive>
             set hive.execution.engine=tez;  
 
-            select account_id, SUM(amount) as total from transactions group by account_id order by total desc limit 10;
+            select account_id, SUM(amount_customer) as total from transactions group by account_id order by total desc limit 10;
 ```
 
 Note the time taken.
@@ -62,12 +62,12 @@ Join transactions & vendors
     hive>
 
     set hive.execution.engine=mr;  
-    select  vendors.category,  SUM(transactions.amount) as total
+    select  vendors.category,  SUM(transactions.amount_customer) as total
         from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category ;
     -- measure the time taken
 
     set hive.execution.engine=tez;  
-    select  vendors.category,  SUM(transactions.amount) as total
+    select  vendors.category,  SUM(transactions.amount_customer) as total
         from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category ;
     -- measure the time taken
 ```
@@ -86,13 +86,13 @@ Compare Spark performance vs MapReduce.
         -- use MR
         set hive.execution.engine=mr;  
 
-        select account_id, SUM(amount) as total from transactions group by account_id order by total desc limit 10;
+        select account_id, SUM(amount_customer) as total from transactions group by account_id order by total desc limit 10;
         -- measure time taken
 
         -- switch to spark
         set hive.execution.engine=spark;  
 
-        select account_id, SUM(amount) as total from transactions group by account_id order by total desc limit 10;
+        select account_id, SUM(amount_customer) as total from transactions group by account_id order by total desc limit 10;
         -- measure time taken
 
         -- Run the query again, notice the time taken
@@ -106,13 +106,13 @@ Now let's try a join query.
 
         -- use MR
         set hive.execution.engine=mr;  
-        select  vendors.category,  SUM(transactions.amount) as total
+        select  vendors.category,  SUM(transactions.amount_customer) as total
             from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category ;
         -- measure time taken
 
         -- switch to spark
         set hive.execution.engine=spark;  
-        select  vendors.category,  SUM(transactions.amount) as total
+        select  vendors.category,  SUM(transactions.amount_customer) as total
             from transactions join vendors on (transactions.vendor_id = vendors.id) group by vendors.category ;
         -- measure time taken
 
