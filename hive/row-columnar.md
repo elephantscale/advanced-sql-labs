@@ -74,7 +74,7 @@ hive>
 Let's do an aggregate query on the tables and compare performance.
 
 ### Query 1 : Simple aggregate (MAX)
-Let's find MAX(amount) from all tables.  
+Let's find MAX(amount_customer) from all tables.  
 **=> Note the query time for all tables**
 
 ```sql  

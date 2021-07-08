@@ -49,13 +49,17 @@ hive>
         use MY_NAME_db;
 
         CREATE EXTERNAL TABLE transactions_p (
-                    id INT,
-                    account_id INT,
-                    vendor_id INT,
-                    `time` STRING,
-                    city STRING,
-                    state STRING ,
-                    amount DOUBLE)
+           id STRING,
+            `timestamp` TIMESTAMP,
+            mti STRING,
+            card_number STRING,
+            amount_customer DECIMAL (10,2),
+            merchant_type STRING,
+            merchant_id STRING,
+            merchant_address STRING,
+            ref_id STRING,
+            amount_merchant  DECIMAL (10,2),
+            response_code STRING)
         PARTITIONED BY (dt STRING)
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','

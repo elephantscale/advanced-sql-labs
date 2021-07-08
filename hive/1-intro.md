@@ -139,61 +139,40 @@ Make sure to use your own DB.
 
 ```sql
     >
-        CREATE EXTERNAL TABLE transactions (
-            id INT,
-            account_id INT,
-            vendor_id INT,
-            `time` STRING,
-            city STRING,
-            state STRING ,
-            amount DOUBLE)
+
+    CREATE EXTERNAL TABLE transactions (
+            id STRING,
+            `timestamp` TIMESTAMP,
+            mti STRING,
+            card_number STRING,
+            amount_customer DECIMAL (10,2),
+            merchant_type STRING,
+            merchant_id STRING,
+            merchant_address STRING,
+            ref_id STRING,
+            amount_merchant  DECIMAL (10,2),
+            response_code STRING
+            )
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','
         stored as textfile
-        LOCATION '/data/transactions/in/'  ;
-
-```
-
-### Vendors Table
-
-```sql
-
-    >
-        CREATE EXTERNAL TABLE vendors (
-            id INT,
-            name STRING,
-            city STRING,
-            state STRING ,
-            category STRING ,
-            swipe_rate DOUBLE)
-        ROW FORMAT DELIMITED
-        FIELDS TERMINATED BY ','
-        stored as textfile
-        LOCATION '/data/vendors/in/'  ;
+        LOCATION '/data/transactions/in'  ;
 
 
 ```
 
-### Accounts Table
+## Rewards table
 
 ```sql
-    >
-        CREATE EXTERNAL TABLE accounts (
-            id INT,
-            accountNo INT,
-            bankID INT,
-            first_name STRING,
-            last_name STRING,
-            email STRING,
-            gender STRING,
-            address STRING,
-            city STRING,
-            state STRING,
-            zip STRING)
+    CREATE EXTERNAL TABLE rewards (
+            merchant_id INT,
+	    reward_points INT
+            )
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','
         stored as textfile
-        LOCATION '/data/accounts/in/'  ;
+        LOCATION '/data/rewards/in'  ;
+
 
 ```
 
@@ -204,8 +183,7 @@ We can use `DESCRIBE` (short form `DESC`) command to see how tables are structur
 ```sql
   hive>
       DESC  transactions;
-      DESC  accounts;
-      DESC  vendors;
+      DESC  rewards;
 ```
 
 To get more details we can use `EXTENDED` option.
@@ -227,7 +205,6 @@ Lets see data in table.
 
         select * from transactions limit 10;
 
-        select * from accounts limit 10;
+        select * from rewards limit 10;
 
-        select * from vendors limit 10;
 ```
