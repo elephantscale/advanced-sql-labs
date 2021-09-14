@@ -81,14 +81,3 @@ Pretty print the numbers displayed.
 
 Hint : checkout [format_number](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) function
 
-## Bonus Lab 2 : Map side Join
-Hive can cache small tables in memory.  This will speed up the join operation.
-
-MapJoin syntax is:
-```sql
-
-    select /*+ MAPJOIN (small_table) */ big_table.*, small_table.* from ....
-
-    -- for example
-    select /*+ MAPJOIN (vendors) */ transactions.*,  vendors.* from .....
-```

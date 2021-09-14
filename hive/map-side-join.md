@@ -54,49 +54,17 @@ $  beeline
         select * from vendors limit 10;
 ```
 
-## Step 3 : Join 'transactions' and 'vendors' table
+## Step 3 : Join 'transactions' and 'vendors' table as a reduce side join
 
 ```sql
-    >
+    > set hive.auto.convert.join=false;
         select transactions.*,  vendors.* from transactions join vendors on (transactions.vendor_id = vendors.id) limit 10;
 ```
 
-## Step 4 : More Joins
-`vendors` table has `category` field.  
-Calculate total money spent on each category.  Update the above join query.  Fill in values for '???'
+## Step 3 : Join 'transactions' and 'vendors' table as a map side join
 
 ```sql
-    >
-        select  vendors.category,  SUM(???) as total
-        from transactions join vendors on (transactions.vendor_id = vendors.id) group by ??? ;
-
+    > set hive.auto.convert.join=true;
+        select transactions.*,  vendors.* from transactions join vendors on (transactions.vendor_id = vendors.id) limit 10;
 ```
 
-## Step 5:  Pretty Print
-
-Pretty print the numbers displayed.
-
-Hint : checkout [format_number](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) function
-
-## Bonus Lab 1 :  Calculate amount owed to each vendor
-In `vendor` table you will find a column `swipe_rate`.  This is the rate they pay to accept credit card payments.
-
-For example,
-* if swipe_rate is 3%
-* customer paid $1000
-* the vendor gets  : $1000 * (1 - 3/100) = $970
-
-Calculate the final amount of money to be paid to each vendor.
-
-
-## Bonus Lab 2 : Map side Join
-Hive can cache small tables in memory.  This will speed up the join operation.
-
-MapJoin syntax is:
-```sql
-
-    select /*+ MAPJOIN (small_table) */ big_table.*, small_table.* from ....
-
-    -- for example
-    select /*+ MAPJOIN (vendors) */ transactions.*,  vendors.* from .....
-```
