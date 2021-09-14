@@ -15,11 +15,11 @@ These are the labs for the classes
  * [2. Star Schema](hive/star-schema/README.md)
  * [3. Hive Billing](hive/2-billing.md)
  * [4. Hive Functions](hive/5-stats.md)
- * [4. Hive Functions](hive/udf/README.md)
- * [5. Views](hive/13-materialized-views.md)
- * [6. Hive Partitions](hive/3-partitions.md)
- * [7. Hive Joins](hive/4-join.md)
- * [8. Tez](hive/tez/README.md)
+ * [5. Hive UDF](hive/udf/README.md)
+ * [6. Views](hive/13-materialized-views.md)
+ * [7. Hive Partitions](hive/3-partitions.md)
+ * [8. Hive Joins](hive/4-join.md)
+ * [9. Tez](hive/tez/README.md)
 
 ## Modern Big Data Engineering with SQL 201 Labs
 
